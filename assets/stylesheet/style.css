@@ -1,0 +1,227 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Custom Styling Starts Here */
+/* Desktop First Approach */
+
+/* My Resets */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+
+/* General Styles */
+html {
+    font-size: 16px;
+}
+body {
+    font-family: 'Raleway', sans-serif;
+    max-width: 1370px;
+    width: 100%;
+}
+button,
+input,
+select {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+}
+img,
+audio,
+video {
+    width: 100%;
+}
+
+/* Variables */
+:root {
+    --header-text:#635551;
+    --primary-bg:#EA5433;
+    --switch-bg:#584B48;
+    --primary-bg-light:#F5C1AE;
+    --secondary-bg:#FEF9F7;
+    --text-white:#FFFFFF;
+    --heading-whitebg:#313030;
+    --text-whitebg:#757474;
+    --heading-2:#554945;
+    --text-2-1:#7F6D68;
+    --text-2-2:#646464;
+    --text-3:#9E9B9B;
+    --text-4:#BABABA;
+}
+
+/* Containers */
+.container-90 {
+    max-width: 90%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Flex */
+.flex {
+    display: flex;
+}
+.flex-column {
+    flex-direction: column;
+}
+.justify-between {
+    justify-content: space-between;
+}
+.justify-center {
+    justify-content: center;
+}
+.flex-60 {
+    flex: 0 1 60%;
+}
+
+/* Headings */
+h1 {
+    font-size: 2.75rem;
+    font-weight: 800;
+}
+
+/* Header Styles */
+.header {
+    padding: 1rem 0;}
+.brand-name {
+    color: var(--header-text);
+    font-size: 1.75rem ;
+    font-weight: 800;
+}
+.nav-menu ul {
+    padding-top: .5rem;
+}
+.nav-menu a {
+    font-size: .85rem;
+    font-weight: 700;
+    color: var(--header-text);
+}
+.nav-menu .active {
+    color: var(--primary-bg);
+}
+.drop-down-options {
+    display: none;
+    width: 9rem;
+    border-radius: 0.5rem ;
+    background-color: white;
+    box-shadow: 0.1rem 0.1rem 0.5rem 0 rgba(0, 0, 0, .2),
+    -0.1rem -0.1rem 0.5rem 0 rgba(0, 0, 0, .2);
+    z-index: 98;
+}
+.drop-down-options li {
+    padding: 0 1rem;
+    margin: 1rem 0;
+}
+.drop-down {
+    position: relative;
+    padding-bottom: 0.5rem;
+    transition: all 900ms ease-in-out;
+}
+.drop-down:hover .drop-down-options {
+    display: block;
+    position: absolute;
+    top: 1.5rem;
+    left: -0.5rem;
+}
+.drop-down-2-options {
+    display: none;
+    width: 8rem;
+    border-radius: 0.5rem ;
+    background-color: white;
+    box-shadow: 0.1rem 0.1rem 0.5rem 0 rgba(0, 0, 0, .2),
+    -0.1rem -0.1rem 0.5rem 0 rgba(0, 0, 0, .2);
+    z-index: 99;
+}
+.drop-down-2 {
+    transition: all 900ms ease-in-out;
+}
+.drop-down-2:hover .drop-down-2-options {
+    display: block;
+    position: absolute;
+    top: 2rem;
+    left: 95%;
+}
+
+/* Main Styles */
+/* Hero Section */
+.hero {
+    background: url(../media/hero-bg.jpg) -20rem -10rem no-repeat;
+    padding: 12rem 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Hovering Styles */
+a:hover {
+    color: var(--primary-bg);
+}
