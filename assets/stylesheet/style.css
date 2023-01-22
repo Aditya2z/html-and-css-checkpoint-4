@@ -72,13 +72,15 @@ body {
 }
 button,
 input,
-select {
+select,
+textarea {
     border: none;
     outline: none;
     box-shadow: none;
     cursor: pointer;
     font-family: 'Raleway', sans-serif;
     padding: 0;
+    font-weight: 600;
 }
 img,
 audio,
@@ -196,6 +198,11 @@ h5 {
     font-weight: 800;
     line-height: 1.2;
 }
+h6 {
+    font-size: .875rem;
+    font-weight: 700;
+    color: var(--text-1-secondarybg);
+}
 .heading-white-bg {
     color: var(--heading-whitebg);
 }
@@ -208,6 +215,9 @@ h5 {
 }
 .text-white-bg {
     color: var(--text-whitebg);
+}
+.text-accent {
+    color: var(--primary-bg);
 }
 
 /* Buttons */
@@ -222,7 +232,7 @@ h5 {
     -0.1rem -0.1rem 0.5rem 0 rgba(234,84,51,.25);
 }
 
-
+/* Home Page Style Start */
 /* Header Styles */
 .header {
     padding: 1rem 0;
@@ -874,20 +884,368 @@ h5 {
     top: 1.5rem;
     z-index: 3;
 }
+/* FAQ Section*/
+.faq {
+    background-color: var(--secondary-bg);
+    padding: 3rem 0;
+    text-align: center;
+}
+.faq h3{
+    color: var(--heading1-secondarybg);
+}
+.faq .heading {
+    margin-bottom: 2rem;
+}
+.faq .heading .text{
+    margin: 1rem 0;
+}
+.faq .question-answer {
+    max-width: 80%;
+    width: 100%;
+    margin: 0 auto;
+    font-size: .875rem;
+    font-weight: 700;
+    color: var(--text-1-secondarybg);
+}
+.question-1,.question-2,.question-3,.question-4,.question-5 {
+    margin: 1rem 0;
+    background-color: var(--text-white);
+    padding: 1.5rem;
+}
+.faq .question {
+    z-index: 3;
+}
+.faq .question .q-mark {
+    border: 2px solid var(--primary-bg-lightest);
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: .5rem;
+    border-radius: 50%;
+    color: var(--primary-bg-lightest);
+    font-size: .75rem;
+}
+.faq .answer {
+    font-weight: 600;
+    text-align: left;
+    position: relative;
+}
+.faq .answer .text {
+    padding: 1rem;
+    display: none;
+}
+.faq .answer .fa-solid {
+    font-size: .8125rem;
+    position: absolute;
+    right: 1rem;
+    top: -1rem;
+}
+.faq .answer input {
+    margin-right: 1rem;
+    position: absolute;
+    right: 8rem;
+    top: 1.75rem;
+    display: none;
+}
+.faq .answer .fa-chevron-up {
+    display: none;
+}
+/* Answer display toggle and icon display toggle */
+#icon-toggle:checked ~ .fa-chevron-down {
+    display: none;
+}
+#icon-toggle:checked ~ .fa-chevron-up {
+    display: inline-block;
+}
+#icon-toggle:checked ~ .text {
+    display: block;
+}
+#icon-toggle-2:checked ~ .fa-chevron-down {
+    display: none;
+}
+#icon-toggle-2:checked ~ .fa-chevron-up {
+    display: inline-block;
+}
+#icon-toggle-2:checked ~ .text {
+    display: block;
+}
+#icon-toggle-3:checked ~ .fa-chevron-down {
+    display: none;
+}
+#icon-toggle-3:checked ~ .fa-chevron-up {
+    display: inline-block;
+}
+#icon-toggle-3:checked ~ .text {
+    display: block;
+}
+#icon-toggle-4:checked ~ .fa-chevron-down {
+    display: none;
+}
+#icon-toggle-4:checked ~ .fa-chevron-up {
+    display: inline-block;
+}
+#icon-toggle-4:checked ~ .text {
+    display: block;
+}
+#icon-toggle-5:checked ~ .fa-chevron-down {
+    display: none;
+}
+#icon-toggle-5:checked ~ .fa-chevron-up {
+    display: inline-block;
+}
+#icon-toggle-5:checked ~ .text {
+    display: block;
+}
+/* Contact Section */
+.contact {
+    background-color: var(--text-white);
+    text-align: center;
+    padding: 3rem 0;
+}
+.contact h3{
+    color: var(--heading1-secondarybg);
+}
+.contact .heading {
+    margin-bottom: 2rem;
+}
+.contact .heading .text{
+    margin: 1rem 0;
+}
+.contact .address {
+    max-width: 80%;
+    width: 100%;
+    margin: 0 auto;
+}
+.contact .card {
+    padding: 1rem;
+    text-align: left;
+    box-shadow: 0.1rem 0.1rem 0.5rem 0 rgba(0, 0, 0, .1),
+    -0.1rem -0.1rem 0.5rem 0 rgba(0, 0, 0, .1);
+}
+.contact .card figure {
+    border: 2px dotted var(--primary-bg-lightest);
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    color: var(--primary-bg);
+    margin-right: 1rem;
+}
+
+.contact .card h5 {
+    color: var(--text-3);
+}
+.contact .card address {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--heading-whitebg);
+    margin: 1rem 0;
+}
+.contact form {
+    max-width: 80%;
+    width: 100%;
+    margin: 2rem auto;
+    box-shadow: 0.1rem 0.1rem 0.5rem 0 rgba(0, 0, 0, .1),
+    -0.1rem -0.1rem 0.5rem 0 rgba(0, 0, 0, .1);
+    padding: 2rem;
+    text-align: center;
+}
+.contact form input, .contact form textarea  {
+    margin: .5rem 0;
+    border: 1px solid rgba(0, 0, 0, .1);
+    width: 100% ;
+    padding: .5rem 1rem;
+}
+.contact form .btn {
+    padding: .75rem 2rem;
+    width: auto;
+    box-shadow: none;
+}
+
+/* Footer Styles */
+/* Footer-links */
+.footer-links {
+    background-color: var(--secondary-bg);
+    padding: 3rem 0;
+}
+.footer-links address {
+    color: var(--text-2-secondarybg);
+    font-size: .875rem;
+    font-weight: 500;
+    margin: 1rem 0;
+}
+.footer-links article b {
+    font-weight: 800;
+}
+.footer-links article strong {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--text-1-secondarybg);
+}
+.footer-links li {
+    font-size: .8125rem;
+    font-weight: 600;
+    margin: 1rem .5rem;
+}
+.footer-links li .fa-solid {
+    font-size: .5rem;
+    color: var(--primary-bg);
+    margin-right: .5rem;
+}
+.footer-links li a {
+    color: var(--text-2-secondarybg);
+}
+.footer-links .newsletter p {
+    font-size: .8125rem;
+    font-weight: 700;
+    color: var(--heading2-secondarybg);
+    margin: 1.5rem 0;
+}
+.footer-links .newsletter .subscribe {
+    width: 95%;
+    background-color: var(--text-white);
+    position: relative;
+}
+.footer-links .newsletter .subscribe .btn {
+    padding: .75rem 2rem;
+    border-radius: 2rem;
+    margin-left: 70%;
+}
+/* Footer copyright */
+.footer .copyright {
+    padding: 1rem 0;
+    background-color: var(--text-white);
+}
+.footer small {
+    font-size: .75rem;
+    font-weight: 600;
+    color: var(--heading2-secondarybg);
+}
+.footer small b {
+    font-weight: 800;
+}
+.footer p {
+    font-size: .75rem;
+    font-weight: 600;
+    color: var(--heading2-secondarybg);
+}
+.footer .text-accent {
+    color: var(--primary-bg);
+}
+.copyright .social .circle {
+    background-color: var(--primary-bg);
+    margin-left: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    color: var(--text-white);
+}
+/* Home Page Style End */
+
+
+
+/* Blog Page Style Start */
+.blog-main {
+    margin-top: 5rem;
+    background-color: white;
+}
+/* Blog Page Hero Section */
+.blog-hero {
+    padding: 1rem;
+    background-color: rgb(241, 241, 241);
+}
+.blog-hero p {
+    font-size: .875rem;
+    font-weight: 700;
+    color: var(--text-1-secondarybg);
+}
+.blog-hero strong {
+    display: block;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--text-1-secondarybg);
+}
+/* Blog History Section */
+.blog-history {
+    padding-top: 2rem;
+}
+.blog-history .blogs {
+    box-shadow: 0.1rem 0.1rem 0.5rem 0 rgba(0, 0, 0, .1),
+    -0.1rem -0.1rem 0.5rem 0 rgba(0, 0, 0, .1);
+    margin: 1rem 0;
+}
+.blog-history .blogs article {
+    padding: 1rem;
+}
+.blog-history .blogs article h5 {
+    color: var(--text-1-secondarybg);
+}
+.blog-history .blogs article .user {
+    margin: 1rem 0;
+    font-size: .8125rem;
+    font-weight: 600;
+    color: var(--text-whitebg);
+}
+.blog-history .blogs article .user i {
+    margin-right: .25rem;
+    padding-top: .1rem;
+}
+
+.blog-history .blogs article time {
+    display: inline-block;
+    margin: 1rem 0;
+    font-size: .8125rem;
+    font-weight: 600;
+    color: var(--text-whitebg);
+    margin-left: 1rem;
+}
+.blog-history .blogs .text {
+    font-weight: 500;
+    color: var(--text-1-secondarybg);
+}
+.blog-history .blogs .btn {
+    border-radius: 0;
+    box-shadow: none;
+    margin-bottom: 3rem;
+    padding: .5rem 1rem;
+    position: relative;
+    left: 67%;
+}
+.blog-history nav {
+    max-width: 30%;
+    margin: 3rem auto;
+}
+.blog-history nav button {
+    width: 2rem ;
+    height: 2rem;
+    margin: .5rem;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, .1);
+    color: var(--text-3);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.blog-history nav button .fa-solid {
+    font-size: .5rem;
+}
+.blog-history nav .active {
+    background-color: var(--primary-bg);
+    color: var(--text-white);
+}
+/* Blog Page Style End */
 
 
 
 
-
-
-
-
-
-
-
-
-
-
+/* Back to Top Button */
+body {
+    position: relative;
+}
+.top {
+    position: fixed;
+    right: .25%;
+    bottom: .5rem;
+    padding: .25rem .5rem;
+}
 
 /* Hovering Styles */
 a:hover {
@@ -952,4 +1310,89 @@ a:hover {
 .btn:hover {
     background-color: var(--primary-bg-lighter);
     color: var(--text-white);
+}
+.question:hover {
+    color: var(--primary-bg);
+}
+.copyright .social .circle:hover {
+    background-color: var(--primary-bg-lighter);
+    color: var(--text-white);
+}
+.blog-history nav button:hover {
+    background-color: var(--primary-bg);
+    color: var(--text-white);
+}
+.blog-history .blogs article h5:hover {
+    color: var(--primary-bg);
+}
+
+
+/* Media Query for Medium Screens */
+@media screen and (max-width:1024px) {
+    /* Flex */
+    .flex-100 {
+        flex: 0 1 100%;
+    }
+    /* Header */
+    .header nav {
+        display: none;
+        width: 100%;
+        background-color: rgba(255, 255, 255, .9);
+
+    }
+    .header nav ul {
+        width: 100%;
+        flex-direction: column;
+    }
+    .header .nav-menu-item {
+        width: 20%;
+        text-align: center;
+        order: 1;
+    }
+    .header .drop-down {
+        order: 0;
+    }
+    .header .drop-down .drop-down-options {
+        text-align: left;
+    }
+    #nav-toggle:checked ~ nav {
+        display: flex;
+        position: absolute;
+        top: 4rem;
+        left: 0;
+    }
+    .header input {
+        display: none;
+    }
+    .header .fa-bars {
+        color: var(--primary-bg);
+        font-size: 1.5rem;
+    }
+    /* Main */
+    /* Reasons Section */
+    .reasons .container-90 {
+        flex-direction: column;
+    }
+    .reasons .primary-reason,
+    .reasons .secondary-reason {
+        margin: 1rem 0;
+     }
+     /* About Section */
+     .about .big-fig {
+        height: 30rem;
+        -o-object-fit: cover;
+        object-fit: cover;
+     }
+     /* Clients Section */
+     .clients .grow-overflow {
+        flex: 1 0 25%;
+     }
+     /* Services Section */
+     .services .flex-32 {
+        flex: 0 1 48%;
+        margin: 2rem 0;
+     }
+
+
+
 }
