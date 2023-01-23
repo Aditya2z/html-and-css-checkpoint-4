@@ -1219,6 +1219,7 @@ h6 {
     position: relative;
     left: 67%;
 }
+/* Pagination */
 .blog-history nav {
     max-width: 30%;
     margin: 3rem auto;
@@ -1472,6 +1473,12 @@ a:hover {
         justify-content: center;
         margin: 1rem;
      }
+
+     /* Blog Page Pagination */
+     .blog-history nav {
+        max-width: 100%;
+        margin: 3rem auto;
+    }
 
      /* Back to Top Button */
      .top {
