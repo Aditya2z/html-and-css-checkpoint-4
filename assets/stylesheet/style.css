@@ -1365,6 +1365,15 @@ a:hover {
     }
     .header .drop-down .drop-down-options {
         text-align: left;
+        position: absolute;
+        left: -35%;
+        top: 2.5rem;
+    }
+    .header .drop-down .drop-down-options .drop-down-2-options {
+        position: absolute;
+        width: 60%;
+        left: 100%;
+        top: 20%;
     }
     #nav-toggle:checked ~ nav {
         display: flex;
@@ -1478,12 +1487,24 @@ a:hover {
 @media screen and (max-width:576px) {
     /* Header */
     .header .nav-menu-item {
-        width: 40%;
+        width: 50%;
         text-align: center;
         order: 1;
     }
     .header .drop-down {
         order: 0;
+    }
+    .header .drop-down .drop-down-options {
+        text-align: left;
+        position: absolute;
+        left: -35%;
+        top: 2.5rem;
+    }
+    .header .drop-down .drop-down-options .drop-down-2-options {
+        position: absolute;
+        width: 90%;
+        left: 100%;
+        top: 20%;
     }
     /* Clients Section */
     .clients .grow-overflow {
